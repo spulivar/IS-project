@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Travel Website | By Code Info</title>
+    <title>Just for Visit</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -69,17 +69,35 @@
       var isClose=true;
         const stopwords = ["of", "the", "a", "an", "any", "is", "can", "who", "what", "why", "whom", "where"];
         var editor = "sorts\n" +
-            "    #places = {agra, egypt, newyork, orlando, kayaking, fallcolors, miami}.\n" +
-            "    #monuments = {tajmahal, pyramids, timesquare, universalstudios, orlando, smokymountains, beaches}.\n" +
+            "    #places = {agra, egypt, newyork, orlando, kayaking, fallcolors, miami, arizona, dallas, europe, newyork, japan, austrlia, hawaii, londontoparis}.\n" +
+            "    #monuments = {tajmahal, pyramids, timesquare, universalstudios, orlando, smokymountains, beaches, rooseveltlakeview, desidistrict, barcelona, broadwayhotel, summer, eta, kayak, eurostartrain}.\n" +
             "predicates\n" +
             "    famousfor(#places, #monuments).\n" +
+			"    famousin(#places, #monuments).\n" +
+			"    bestlakeview(#places, #monuments).\n" +
+			"    bestplaceinsummer(#places, #monuments).\n" +
+			"    bestindianrestaurant(#places, #monuments).\n" +
+			"	 affordableaccommodation(#places, #monuments).\n" +
+			"	 besttimeofyear(#places, #monuments).\n" +
+			"	 visafortravel(#places, #monuments).\n" +
+			"    cheapestflights(#places, #monuments).\n" +
+			"	 bestwaytotravel(#places, #monuments).\n" +
             "rules\n" +
             "    famousfor(agra, tajmahal).\n" +
 			"    famousfor(egypt, pyramids).\n" +
-			"    famousfor(newyork, orlando).\n" +
+			"    famousfor(newyork, timesquare).\n" +
+			"    famousfor(orlando, universalstudios).\n" +
 			"    famousfor(kayaking, orlando).\n" +
-			"    famousfor(fallcolors, smokymountains).\n" +
-            "    famousfor(miami, beaches).";
+			"    famousin(fallcolors, smokymountains).\n" +
+            "    famousfor(miami, beaches).\n" +
+			"    bestlakeview(arizona, rooseveltlakeview).\n" +
+			"    bestindianrestaurant(dallas, desidistrict).\n" +
+			"    bestplaceinsummer(europe, barcelona).\n" +
+			"    affordableaccommodation(newyork, broadwayhotel).\n" +
+			"    besttimeofyear(japan, summer).\n" +
+			"    visafortravel(austrlia, eta).\n" +
+			"    cheapestflights(hawaii, kayak).\n" +
+			"    bestwaytotravel(londontoparis, eurostartrain).";	
         // sorts
         var contstring = editor.split("sorts\n")[1].split("predicates\n");
         var sortstring = contstring[0].split('.');
@@ -229,5 +247,26 @@
         }
         
     </script>
+	<section class="home_section">
+    <div class="overlay">
+      <div class="container">
+        <div class="home">
+          <h1><span>meet</span> people <br>discover <span>places</span> <br><span>enjoy</span> time</h1>
+          <div class="home_buttons">
+            <button class="btn1">Explore World</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <div class="title">
+        <h1>Visit World's best <span>places</span></h1>
+        <span class="slogan">enjoy your trip.</span>
+      </div>
+  </div>
+  </section>
   </body>
 </html>
